@@ -1,0 +1,32 @@
+
+/*about*/
+.about {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;  
+    background: #fff;
+  }
+  
+ .about .image img{
+      width:100%;
+  }
+  .about  .heading-section {
+    margin-bottom: 5rem;
+    text-align: left;
+    width:auto;
+  }
+  @media (min-width: 992px) {
+    .about {
+      flex-wrap: no-wrap;
+      flex-direction: row;
+    }
+  }
+  @media (max-width: 991px) {
+    .about {
+      flex-direction: column;
+      flex-wrap: wrap;
+    }
+  }
+ 
+  

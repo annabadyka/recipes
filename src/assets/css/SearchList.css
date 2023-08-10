@@ -1,0 +1,77 @@
+  .search_results .search_cont .search_card {
+    box-shadow: rgba(0, 0, 0, 0.03) 0 0 0 2px;
+    background: #fff;
+    margin: 1rem;
+    box-sizing: border-box;
+  }
+  .search_results .search_cont .search_card:hover img {
+    transform: scale(1.1);
+  }
+  .search_results .search_cont .search_card .image {
+    height: 30rem;
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+    background: url(../imgs/default_img_load.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  .search_results .search_cont .search_card .image .card-type, .search_results .search_cont .search_card .image .cuisineType,
+   .search_results .search_cont .search_card .image .mealType {
+    position: absolute;
+    padding: 1rem;
+    text-transform: capitalize;
+    font-weight: bolder;
+  }
+  .search_results .search_cont .search_card .image .card-type{
+    top: 6rem;
+    right: 1rem;
+    font-size: 1.4rem;
+    background: #e64e4e;
+    color: #fff;
+  }
+  .search_results .search_cont .search_card .image .cuisineType{
+    bottom: 1rem;
+    left: 1rem;
+    background: #7da870;
+    color: #fff;
+    font-size: 2rem;
+  }
+  .search_results .search_cont .search_card .image .mealType{
+    top: 1rem;
+    right: 1rem;
+    background: #fff;
+    color: #111;
+    font-size: 1.4rem;
+  }
+  .search_results .search_cont .search_card .image img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  .search_results .search_cont .search_card .content {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding: 1rem;
+    gap: 1rem;
+  }
+  .search_results .search_cont .search_card .content .search_card_title {
+    padding: 1rem 0;
+    font-size: 1.6rem;
+    color: #111;
+    font-weight: bolder;
+  }
+  
+  .search_results .search_cont .search_card .content div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 1rem;
+  }
+
+  .search_results .search_no_results{
+    text-align:center; 
+    color:#e64e4e;
+    font-size:2rem;
+  }

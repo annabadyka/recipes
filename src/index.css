@@ -1,0 +1,139 @@
+@import '@csstools/normalize.css';
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap");
+
+/*general*/
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: all 0.2s linear;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 9rem;
+}
+html ::selection {
+  background: #88b649;
+}
+
+body {
+  background: #111;
+  overflow-x: hidden;
+}
+
+.paddingGen, .contact, .single, .about, .services, .banner, .search_results, .fav_results {
+  padding: 5% 10%;
+}
+
+.loading_container{
+  width:100%;
+  display: flex;
+  align-items:center;
+  justify-content:center;
+  background:transparent;
+  height: 10rem;
+}
+.loading  {
+    width: 70px;
+    height: 70px;
+    border: 5px solid #FFF;
+    border-bottom-color: #88b649;
+    border-radius: 50%;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+  }
+
+  @keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+  }
+
+.btn {
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 1.5rem 3.5rem;
+  font-size: 1.7rem;
+  color: #fff;
+  cursor: pointer;
+  background: #e64e4e;
+}
+.btn:hover {
+  color: #e64e4e;
+  background: #aaa;
+}
+
+.btn_link {
+  font-size: 1.7rem;
+  color: #e64e4e;
+  border: none;
+}
+.btn_link:hover {
+  color: #e64e4e;
+  border: none;
+  background: transparent;
+  cursor:pointer;
+}
+.btn_link:hover i {
+  padding-right: 1rem;
+}
+
+i {
+  font-size: 2rem;
+  color: #e64e4e;
+  margin-bottom: 1rem;
+  padding-left: 0.5rem;
+}
+
+.fa-rice{
+  font-size: 3rem;
+  color: #88b649;
+}
+
+
+h1 {
+  font-size: 7rem;
+  color: #fff;
+  margin-bottom: 2rem;
+}
+
+h2 {
+  color: #111;
+  font-size: 4rem;
+  margin-bottom: 2rem;
+}
+
+h3 {
+  color: #111;
+  font-size: 3rem;
+}
+
+.heading-section {
+  text-align: center;
+  padding-bottom: 2rem;
+  width: 100%;
+}
+.heading-section span {
+  font-size: 2rem;
+  color: #88b649;
+}
+.heading-section p {
+  margin: 1rem auto;
+  font-size: 1.4rem;
+  color: #aaa;
+  line-height: 2rem;
+}
+
+section.container {
+  width: 100%;
+}
