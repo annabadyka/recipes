@@ -1,8 +1,8 @@
 import '../assets/css/Single.css';
 import { FaChevronLeft, FaRegPenToSquare, FaCarrot, FaHeartPulse, FaFire, FaEarthEurope} from "react-icons/fa6";
-import { useLoaderData, Navigate } from "react-router-dom";
+import { useLoaderData, Navigate, ScrollRestoration } from "react-router-dom";
 import { useQuery } from '@tanstack/react-query';
-
+ 
 import axios from 'axios';
 
 import fallbackImage from '../assets/imgs/default_img.jpg';
@@ -23,6 +23,7 @@ export const loader= (queryClient) =>async({params})=>{
 }
 
 const SinglePage = ()=> { 
+
    const {id} = useLoaderData();
    const {data} =useQuery(singleRecipeQuery(id));
    if (!data) return <Navigate to='/' />;
@@ -37,6 +38,7 @@ const SinglePage = ()=> {
     }
     return(
            <>
+            <ScrollRestoration />
             <section className="single-secondary">
                   <div className="heading-section">
                     <h2>{singleRecipe?.label}</h2>
