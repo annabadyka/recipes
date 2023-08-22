@@ -9,15 +9,15 @@ const SearchForm= ({searchIngredient, searchCuisineType, searchDishType})=> {
     const isFormSubmitting = navigation.state ==='submitting';
    
     return(
-        <section className="search-form">
+        <section className='search-form'>
             <Form>
-                <div className="inputBox">
-                    <label htmlFor="searchIngredient">ingredient</label>
-                    <input type="text" name="searchIngredient" id="searchIngredient" defaultValue={searchIngredient}/>
+                <div className='inputBox'>
+                    <label htmlFor='searchIngredient'>ingredient</label>
+                    <input type='text' name='searchIngredient' id='searchIngredient' defaultValue={searchIngredient}/>
                 </div>  
-                <div className="inputBox">
-                    <label htmlFor="searchCuisineType">Cuisine Type</label>
-                    <select name="searchCuisineType" id="searchCuisineType" defaultValue={searchCuisineType}>
+                <div className='inputBox'>
+                    <label htmlFor='searchCuisineType'>Cuisine Type</label>
+                    <select name='searchCuisineType' id='searchCuisineType' defaultValue={searchCuisineType}>
                     {
                         cuisineType.map((type, index)=>{
                             return(
@@ -27,9 +27,9 @@ const SearchForm= ({searchIngredient, searchCuisineType, searchDishType})=> {
                     } 
                     </select>
                 </div>
-                <div className="inputBox">
-                    <label htmlFor="searchDishType">Dish Type</label>
-                    <select name="searchDishType" id="searchDishType" defaultValue={searchDishType}>
+                <div className='inputBox'>
+                    <label htmlFor='searchDishType'>Dish Type</label>
+                    <select name='searchDishType' id='searchDishType' defaultValue={searchDishType}>
                     {
                         dishType.map((type, index)=>{
                             return(
@@ -39,7 +39,7 @@ const SearchForm= ({searchIngredient, searchCuisineType, searchDishType})=> {
                     } 
                     </select>
                 </div>
-                <input type="submit" value={isFormSubmitting ? 'searching' : 'search'} disabled={isFormSubmitting} className="btn" />
+                <input type='submit' value={isFormSubmitting ? 'searching' : 'search'} disabled={isFormSubmitting} className='btn' />
             </Form>
             </section>
       );

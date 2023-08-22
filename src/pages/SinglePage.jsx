@@ -1,6 +1,6 @@
 import '../assets/css/Single.css';
-import { FaChevronLeft, FaRegPenToSquare, FaCarrot, FaHeartPulse, FaFire, FaEarthEurope} from "react-icons/fa6";
-import { useLoaderData, Navigate, ScrollRestoration } from "react-router-dom";
+import { FaChevronLeft, FaRegPenToSquare, FaCarrot, FaHeartPulse, FaFire, FaEarthEurope} from 'react-icons/fa6';
+import { useLoaderData, Navigate, ScrollRestoration } from 'react-router-dom';
 import { useQuery } from '@tanstack/react-query';
  
 import axios from 'axios';
@@ -39,27 +39,27 @@ const SinglePage = ()=> {
     return(
            <>
             <ScrollRestoration />
-            <section className="single-secondary">
-                  <div className="heading-section">
+            <section className='single-secondary'>
+                  <div className='heading-section'>
                     <h2>{singleRecipe?.label}</h2>
                     </div>
             </section>
-            <section className="container">                
-                <section className="single">                    
-                   <section className="single-top-cont">                   
-                        <p className="btn_link_cont">
-                            <button className="btn_link" onClick={handleBackHome}><i className="fa fa-angle-right"><FaChevronLeft/></i> back to search </button>
+            <section className='container'>                
+                <section className='single'>                    
+                   <section className='single-top-cont'>                   
+                        <p className='btn_link_cont'>
+                            <button className='btn_link' onClick={handleBackHome}><i className='fa fa-angle-right'><FaChevronLeft/></i> back to search </button>
                         </p>
                     </section>
                     
-                   <section className="single-calories">
-                        <div className="calories-info"><div><i><FaCarrot/></i> </div> <div>{singleRecipe?.calories.toFixed(2)} <span>K</span></div></div> 
-                        <div className="source-info"><div><i><FaEarthEurope/></i></div><div><span>By </span>{singleRecipe?.source}</div></div>
+                   <section className='single-calories'>
+                        <div className='calories-info'><div><i><FaCarrot/></i> </div> <div>{singleRecipe?.calories.toFixed(2)} <span>K</span></div></div> 
+                        <div className='source-info'><div><i><FaEarthEurope/></i></div><div><span>By </span>{singleRecipe?.source}</div></div>
                   </section>
-                    <div className="single-top">                         
-                            <div className="image_cont">
+                    <div className='single-top'>                         
+                            <div className='image_cont'>
                                 <img src={singleRecipe?.images?.LARGE?.url} alt={singleRecipe?.label} onError={handleError} /> 
-                                {singleRecipe?.dishType && <div className="card-type">
+                                {singleRecipe?.dishType && <div className='card-type'>
                                     {singleRecipe.dishType.map((type, index)=>{
                                         return (
                                             <span key={index}> 
@@ -69,7 +69,7 @@ const SinglePage = ()=> {
                                     })}   
                                     </div> 
                                 }                        
-                                {singleRecipe?.cuisineType && <div className="cuisineType">
+                                {singleRecipe?.cuisineType && <div className='cuisineType'>
                                     {singleRecipe.cuisineType.map((type, index)=>{
                                         return (
                                             <span key={index}> 
@@ -79,7 +79,7 @@ const SinglePage = ()=> {
                                     })}   
                                     </div>                                   
                                 } 
-                                {singleRecipe?.mealType && <div className="mealType">
+                                {singleRecipe?.mealType && <div className='mealType'>
                                     {singleRecipe.mealType.map((type, index)=>{
                                         return (
                                             <span key={index}> 
@@ -92,9 +92,9 @@ const SinglePage = ()=> {
                             </div> 
                         
                         
-                        <div className="ingredients-info">
+                        <div className='ingredients-info'>
                             <h3>Ingredients</h3>
-                            <div className="ingredients-info-spec">
+                            <div className='ingredients-info-spec'>
                                 {                                     
                                     singleRecipe?.ingredientLines?.map((ingred, index)=>{
                                         return(
@@ -105,10 +105,10 @@ const SinglePage = ()=> {
                             </div>
                         </div> 
                     </div>
-                    <div className="single-bottom">
-                    {(singleRecipe?.healthLabels && singleRecipe?.healthLabels.length > -1 )&& <div className="health-info">
+                    <div className='single-bottom'>
+                    {(singleRecipe?.healthLabels && singleRecipe?.healthLabels.length > -1 )&& <div className='health-info'>
                             <h3>Health Labels</h3>
-                            <div className="health-info-spec">
+                            <div className='health-info-spec'>
                             {                                     
                                     singleRecipe?.healthLabels?.map((label, index)=>{
                                         return(
@@ -120,9 +120,9 @@ const SinglePage = ()=> {
                         </div> 
                     }  
                     
-                    {(singleRecipe?.cautions && singleRecipe?.cautions.length > -1 ) && <div className="caution-info">
+                    {(singleRecipe?.cautions && singleRecipe?.cautions.length > -1 ) && <div className='caution-info'>
                             <h3>Caution</h3>
-                            <div className="caution-info-spec">
+                            <div className='caution-info-spec'>
                             {                                     
                                 singleRecipe?.cautions?.map((caution, index)=>{
                                     return(

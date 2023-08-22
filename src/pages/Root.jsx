@@ -8,7 +8,7 @@ const Root = ()=> {
    return(
     <>       
         <Navbar/>
-        <section className="container">                
+        <section className='container'>                
          <Outlet/>
         </section>
         <Banner/>

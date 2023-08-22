@@ -11,9 +11,9 @@ const SearchItem= ({hit})=> {
        <>
              {hit.recipe?.images?.LARGE?.url && 
              <Link to={`/single/${id}`}>
-             <div className="image">
+             <div className='image'>
                <img src={hit.recipe.images.LARGE.url} alt={hit.recipe?.label} onError={handleError}/>
-                  {hit.recipe?.dishType && <div className="card-type">
+                  {hit.recipe?.dishType && <div className='card-type'>
                     {hit.recipe.dishType.map((type, index)=>{
                         return (
                             <span key={index}> 
@@ -22,7 +22,7 @@ const SearchItem= ({hit})=> {
                         );
                     })}
                 </div>}
-                {hit.recipe?.cuisineType && <div className="cuisineType">
+                {hit.recipe?.cuisineType && <div className='cuisineType'>
                     {hit.recipe.cuisineType.map((type, index)=>{
                         return (
                             <span key={index}> 
@@ -32,7 +32,7 @@ const SearchItem= ({hit})=> {
                     })}
                 </div>}
                  
-                {hit.recipe?.mealType && <div className="mealType">
+                {hit.recipe?.mealType && <div className='mealType'>
                     {hit.recipe.mealType.map((type, index)=>{
                         return (
                             <span key={index}> 
@@ -42,8 +42,8 @@ const SearchItem= ({hit})=> {
                     })}
                 </div>}
             </div>            
-            <div className="content">
-                <div><p className="search_card_title">{hit.recipe?.label}</p></div>
+            <div className='content'>
+                <div><p className='search_card_title'>{hit.recipe?.label}</p></div>
             </div>
             </Link>
             }

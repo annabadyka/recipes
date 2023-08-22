@@ -222,5 +222,10 @@ export const cuisineType = [
         id: 23,
         name: 'alcohol cocktail',
         value: 'alcohol cocktail'        
+    },
+    {
+        id: 24,
+        name: 'desserts',
+        value: 'desserts'        
     }
   ];

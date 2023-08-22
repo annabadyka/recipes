@@ -6,16 +6,16 @@ import '../assets/css/SearchList.css';
 const SearchList= ({hits})=> {
  if(hits.length==0){
   return (
-      <div className="search_no_results">No resuts found. Please try again.</div>        
+      <div className='search_no_results'>No resuts found. Please try again.</div>        
      );
 }
  
     return(
-        <div className="search_cont">
+        <div className='search_cont'>
           {
             hits.map((hit, index)=>{
               return(
-                <div className="search_card" key={index}>
+                <div className='search_card' key={index}>
                   <SearchItem hit={hit}/>
                 </div>
               );

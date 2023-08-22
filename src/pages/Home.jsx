@@ -1,5 +1,5 @@
 import SearchList from '../components/SearchList'; 
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData } from 'react-router-dom';
 import { useQuery } from '@tanstack/react-query';
 import '../assets/css/Home.css';
 import { useNavigation } from 'react-router-dom';
@@ -31,29 +31,32 @@ export const loader = (queryClient) => async({request}) => {//request form url. 
 const Home = ()=> {
   const navigation = useNavigation(); 
   const isPageLoading = navigation.state ==='loading';
+  const isPageLoaded = navigation.state ==='idle';
 
   const {searchIngredient, searchCuisineType, searchDishType} = useLoaderData();
   const {data: hits}  = useQuery(searchRecipesQuery(searchIngredient, searchCuisineType, searchDishType)); //renamed to hits
 
   return(
          <>
-          <section className="home_hero">
-              <div className="heading-section">
+          <section className='home_hero'>
+              <div className='heading-section'>
               <h1>find best recipes</h1>
               </div>
              <SearchForm searchIngredient={searchIngredient} searchCuisineType ={searchCuisineType} searchDishType={searchDishType}/>
           </section>
-          <section className="container">
-              <section className="search_results">
-              <div className="heading-section">
+          <section className='container'>
+              <section className='search_results'>
+              <div className='heading-section'>
                   <span>start your adventure</span>
                   <h2>Delicious recipes</h2>
               </div>
               {isPageLoading && (navigation.location?.pathname=='/') &&
-                <section className="loading_container"><div className="loading"></div></section>
+                <section className='loading_container'><div className='loading'></div></section>
+              }
+              {isPageLoaded &&
+                 <SearchList hits={hits}/>
               }
               
-             <SearchList hits={hits}/>
               </section>
           </section>
           </>    
