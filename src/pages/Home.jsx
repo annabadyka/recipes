@@ -4,6 +4,8 @@ import { useQuery } from '@tanstack/react-query';
 import '../assets/css/Home.css';
 
 import axios from 'axios';
+axios.defaults.headers.common['Access-Control-Allow-Origin'] = '*';
+
 import SearchForm from '../components/SearchForm';
 
 const searchRecipesQuery = (searchIngredient, searchCuisineType, searchDishType) =>{

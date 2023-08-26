@@ -3,6 +3,7 @@ import { FaChevronLeft, FaRegPenToSquare, FaCarrot, FaHeartPulse, FaFire, FaEart
 import { useLoaderData, Navigate} from 'react-router-dom';
 import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
+axios.defaults.headers.common['Access-Control-Allow-Origin'] = '*';
 
 import fallbackImage from '../assets/imgs/default_img.jpg';
 
@@ -12,6 +13,7 @@ const singleRecipeQuery = (id) =>{
         queryKey: ['recipe', id], 
         queryFn: async () => {
             const {data} = await axios.get(`https://api.edamam.com/api/recipes/v2/${id}?type=public&app_id=${import.meta.env.VITE_APP_ID}&app_key=${import.meta.env.VITE_API_KEY}&field=uri&field=label&field=images&field=source&field=healthLabels&field=cautions&field=ingredientLines&field=calories&field=cuisineType&field=mealType&field=dishType`);//url
+            window.scrollTo(0,0);
             return data;
         }
     }
