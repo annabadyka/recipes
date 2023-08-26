@@ -7,14 +7,14 @@ const Footer = ()=> {
         <section className='container'>
             <section className='footer'>
                 <div className='box-container'>  
-                    <a href='https://github.com/annabadyka' className='fab fa-instagram' target='_blank' ><FaGithub/></a>
-                    <a href='https://www.linkedin.com/in/anna-badyka-karpenko/' className='fab fa-linkedin' target='_blank' ><FaLinkedinIn/></a>
+                    <a href='https://github.com/annabadyka' className='fab fa-instagram' target='_blank'  aria-label='Follow on Github'><FaGithub/></a>
+                    <a href='https://www.linkedin.com/in/anna-badyka-karpenko/' className='fab fa-linkedin' target='_blank'  aria-label='Follow on Linkedin'><FaLinkedinIn/></a>
                 </div>
                 <div className='box-container'>
                     &copy; World of Recipes. 2023 | All rights reserved.
                 </div>
                 <div className='sponsor_logo'>                
-                    <a href='http://developer.edamam.com' target='_blank'><img src={edamam_logo}/></a>                 
+                    <a href='http://developer.edamam.com' target='_blank'><img src={edamam_logo} alt='Edamam Api' title='Edamam Api' aria-label='Edamam Api'/></a>                 
                 </div>                
             </section>
         </section>

@@ -14,15 +14,15 @@ const Navbar = ()=> {
          
             <nav className={isNavbarOpen ? 'navbar show-navbar' : 'navbar hide-navbar'}>
                 <NavLink to={'/'} className={
-                    ({ isActive}) => isActive ? 'active' : ''}
+                    ({ isActive}) => isActive ? 'active' : ''} 
                     >home</NavLink>               
                 <NavLink to={'/about'} className={
                     ({ isActive}) => isActive ? 'active' : ''}
                     >about</NavLink>  
             </nav>
             <div className='soc-links'>
-                <a href='https://github.com/annabadyka' className='fab fa-instagram' target='_blank' ><FaGithub/></a>
-                <a href='https://www.linkedin.com/in/anna-badyka-karpenko/' className='fab fa-linkedin' target='_blank' ><FaLinkedinIn/></a>
+                <a href='https://github.com/annabadyka' className='fab fa-instagram' target='_blank' aria-label='Follow on Github'><FaGithub/></a>
+                <a href='https://www.linkedin.com/in/anna-badyka-karpenko/' className='fab fa-linkedin' target='_blank' aria-label='Follow on Linkedin'><FaLinkedinIn/></a>
             </div>
         </header>
       );

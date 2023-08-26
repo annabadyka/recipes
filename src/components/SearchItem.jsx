@@ -12,7 +12,7 @@ const SearchItem= ({hit})=> {
              {hit.recipe?.images?.LARGE?.url && 
              <Link to={`/single/${id}`}>
              <div className='image'>
-               <img src={hit.recipe.images.LARGE.url} alt={hit.recipe?.label} onError={handleError}/>
+               <img src={hit.recipe.images.LARGE.url} alt={hit.recipe?.label} title={hit.recipe?.label} aria-label={hit.recipe?.label} onError={handleError}/>
                   {hit.recipe?.dishType && <div className='card-type'>
                     {hit.recipe.dishType.map((type, index)=>{
                         return (

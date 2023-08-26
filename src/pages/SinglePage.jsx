@@ -1,13 +1,13 @@
 import '../assets/css/Single.css';
 import { FaChevronLeft, FaRegPenToSquare, FaCarrot, FaHeartPulse, FaFire, FaEarthEurope} from 'react-icons/fa6';
-import { useLoaderData, Navigate, ScrollRestoration } from 'react-router-dom';
+import { useLoaderData, Navigate} from 'react-router-dom';
 import { useQuery } from '@tanstack/react-query';
- 
 import axios from 'axios';
 
 import fallbackImage from '../assets/imgs/default_img.jpg';
- 
+
 const singleRecipeQuery = (id) =>{
+
     return {
         queryKey: ['recipe', id], 
         queryFn: async () => {
@@ -23,9 +23,9 @@ export const loader= (queryClient) =>async({params})=>{
 }
 
 const SinglePage = ()=> { 
-
+    
    const {id} = useLoaderData();
-   const {data} =useQuery(singleRecipeQuery(id));
+   const {data} = useQuery(singleRecipeQuery(id));
    if (!data) return <Navigate to='/' />;
     const singleRecipe=data.recipe;
 
@@ -38,11 +38,10 @@ const SinglePage = ()=> {
     }
     return(
            <>
-            <ScrollRestoration />
             <section className='single-secondary'>
-                  <div className='heading-section'>
+                <div className='heading-section'>
                     <h2>{singleRecipe?.label}</h2>
-                    </div>
+                </div>                    
             </section>
             <section className='container'>                
                 <section className='single'>                    
@@ -58,7 +57,7 @@ const SinglePage = ()=> {
                   </section>
                     <div className='single-top'>                         
                             <div className='image_cont'>
-                                <img src={singleRecipe?.images?.LARGE?.url} alt={singleRecipe?.label} onError={handleError} /> 
+                                <img src={singleRecipe?.images?.LARGE?.url} alt={singleRecipe?.label} title={singleRecipe?.label} aria-label={singleRecipe?.label} onError={handleError} /> 
                                 {singleRecipe?.dishType && <div className='card-type'>
                                     {singleRecipe.dishType.map((type, index)=>{
                                         return (

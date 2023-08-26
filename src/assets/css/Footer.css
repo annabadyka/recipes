@@ -8,6 +8,7 @@
     justify-content: space-between;
     gap: 2rem;
     flex-direction: column;
+    background:#111;
   }
   
   .footer .box-container {

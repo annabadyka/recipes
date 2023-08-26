@@ -2,7 +2,6 @@ import SearchList from '../components/SearchList';
 import { useLoaderData } from 'react-router-dom';
 import { useQuery } from '@tanstack/react-query';
 import '../assets/css/Home.css';
-import { useNavigation } from 'react-router-dom';
 
 import axios from 'axios';
 import SearchForm from '../components/SearchForm';
@@ -29,10 +28,6 @@ export const loader = (queryClient) => async({request}) => {//request form url. 
 }
 
 const Home = ()=> {
-  const navigation = useNavigation(); 
-  const isPageLoading = navigation.state ==='loading';
-  const isPageLoaded = navigation.state ==='idle';
-
   const {searchIngredient, searchCuisineType, searchDishType} = useLoaderData();
   const {data: hits}  = useQuery(searchRecipesQuery(searchIngredient, searchCuisineType, searchDishType)); //renamed to hits
 
@@ -50,13 +45,7 @@ const Home = ()=> {
                   <span>start your adventure</span>
                   <h2>Delicious recipes</h2>
               </div>
-              {isPageLoading && (navigation.location?.pathname=='/') &&
-                <section className='loading_container'><div className='loading'></div></section>
-              }
-              {isPageLoaded &&
-                 <SearchList hits={hits}/>
-              }
-              
+              <SearchList hits={hits}/>
               </section>
           </section>
           </>    

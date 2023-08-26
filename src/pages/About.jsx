@@ -15,7 +15,7 @@ const About = ()=> {
             <section className='container'>
                 <section className='about'>
                     <div className='image'>
-                        <img src={img_about} alt='' />
+                        <img src={img_about} alt='Recipes About page' title='Recipes About page' aria-label='Recipes About page' />
                     </div>
                     <div className='heading-section'>
                         <span>start your adventure</span>

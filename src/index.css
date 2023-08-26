@@ -26,7 +26,7 @@ html ::selection {
 }
 
 body {
-  background: #111;
+  background: #ffffff;
   overflow-x: hidden;
   width: 100vw;
   height: 100vh;
@@ -42,12 +42,12 @@ body {
   align-items:center;
   justify-content:center;
   background:transparent;
-  height: 10rem;
+  height: 50rem; 
 }
 .loading  {
     width: 70px;
     height: 70px;
-    border: 5px solid #FFF;
+    border: 5px solid #111;
     border-bottom-color: #88b649;
     border-radius: 50%;
     box-sizing: border-box;
@@ -106,7 +106,7 @@ i {
 
 
 h1 {
-  font-size: 7rem;
+  font-size: 5rem;
   color: #fff;
   margin-bottom: 2rem;
 }
@@ -120,6 +120,18 @@ h2 {
 h3 {
   color: #111;
   font-size: 3rem;
+}
+
+@media (min-width: 992px) {  
+  h1 {
+    font-size: 7rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .home_hero {
+    min-height: 70vh;
+  }
 }
 
 .heading-section {

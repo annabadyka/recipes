@@ -30,7 +30,7 @@ const Error = ()=> {
                       <p><Link to={'/'} className='btn'>back home</Link></p>
                 </div>
                 <div className='image'>
-                <img src={img_contact} alt='' />
+                <img src={img_contact} alt='Recipes Error page' title='Recipes Error page' aria-label='Recipes Error page' />
                 </div>   
             </section>
         </section> 
